@@ -3,7 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   // JavaScript 执行入口文件
-  entry: './main.js',
+  entry: './main',
   output: {
     // 把所有依赖的模块合并输出到一个 bundle.js 文件
     filename: 'bundle.js',
@@ -24,7 +24,19 @@ module.exports = {
         test: /\.js$/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.ts$/,
+        use: [
+          {
+            loader: 'awesome-typescript-loader'
+          }
+        ]
+      }
   	]
+  },
+  resolve: {
+    // 先尝试 ts 后缀的 TypeScript 源码文件
+    extensions: ['.ts', '.js'] 
   },
   // 输出source-map 方便直接调试ES6源码
   devtool: 'source-map',
