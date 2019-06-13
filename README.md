@@ -10,3 +10,6 @@
 
 	3.2 [支持 TypeScript 语法](./3/3-2_Support_TypeScript.md)
 
+	3.3 [支持 SCSS](./3/3-3_Support_Scss.md)
+
+	3.4 [使用 html-webpack-plugin 注入 bundle 文件](./3/3-4_html-webpack-plugin.md)
