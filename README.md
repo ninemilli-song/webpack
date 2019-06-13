@@ -8,3 +8,5 @@
 
 	3.1 [支持 ES 语法](./3/3-1使用ES6语法.md)
 
+	3.2 [支持 TypeScript 语法](./3/3-2_Support_TypeScript.md)
+
