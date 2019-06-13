@@ -1,5 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // JavaScript 执行入口文件
@@ -31,6 +32,14 @@ module.exports = {
             loader: 'awesome-typescript-loader'
           }
         ]
+      },
+      {
+        // 增加对 SCSS 文件的支持
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          // 转换 .css 文件需要使用的 Loader
+          use: ['css-loader', 'sass-loader'],
+        }),
       }
   	]
   },
@@ -44,6 +53,16 @@ module.exports = {
   	new ExtractTextPlugin({
   		// 从 .js 文件中提取出来的 .css 文件的名称
       	filename: `[name]_[chunkhash:8].css`,
-  	})
+  	}),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html',
+      inject: 'body',
+      hash: true,                                 // 为静态资源生成hash值
+      minify: {                                   // 压缩HTML文件
+        removeComments: true,                   // 移除HTML中的注释
+        collapseWhitespace: true,               // 删除空白符与换行符
+      },
+    })
   ]
 };
