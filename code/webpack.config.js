@@ -38,7 +38,7 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           // 转换 .css 文件需要使用的 Loader
-          use: ['css-loader', 'sass-loader'],
+          use: ['css-loader', 'postcss-loader', 'sass-loader'],
         }),
       }
   	]
