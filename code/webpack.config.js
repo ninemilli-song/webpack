@@ -26,7 +26,8 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.ts$/,
+        // 同时匹配 ts，tsx 后缀的 TypeScript 源码文件 
+        test: /\.tsx?$/,
         use: [
           {
             loader: 'awesome-typescript-loader'
@@ -44,8 +45,8 @@ module.exports = {
   	]
   },
   resolve: {
-    // 先尝试 ts 后缀的 TypeScript 源码文件
-    extensions: ['.ts', '.js'] 
+    // 先尝试 ts，tsx 后缀的 TypeScript 源码文件 
+    extensions: ['.ts', '.tsx', '.js'] 
   },
   // 输出source-map 方便直接调试ES6源码
   devtool: 'source-map',

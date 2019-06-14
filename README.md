@@ -15,4 +15,6 @@
 	3.4 [使用 html-webpack-plugin 注入 bundle 文件](./3/3-4_html-webpack-plugin.md)
 
 	3.5 [支持 PostCSS](./3/3-5_Support_PostCSS.md)
+
+	3.6 [引入 React](./3-6_Support_React.md)
 	
