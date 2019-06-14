@@ -16,5 +16,5 @@
 
 	3.5 [支持 PostCSS](./3/3-5_Support_PostCSS.md)
 
-	3.6 [引入 React](./3-6_Support_React.md)
+	3.6 [引入 React](./3/3-6_Support_React.md)
 	
