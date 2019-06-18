@@ -1,13 +1,14 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackAssetsManifest = require('webpack-assets-manifest');
 
 module.exports = {
   // JavaScript 执行入口文件
-  entry: './main',
+  entry: './main_browser',
   output: {
     // 把所有依赖的模块合并输出到一个 bundle.js 文件
-    filename: 'bundle.js',
+    filename: 'bundle_browser.js',
     // 输出文件都放到 dist 目录下
     path: path.resolve(__dirname, './dist'),
   },
@@ -18,15 +19,15 @@ module.exports = {
   			test: /\.css$/,
   			use: ExtractTextPlugin.extract({
   				// 转换 .css 文件需要使用的 Loader
-          		use: ['css-loader'],
+          use: ['css-loader'],
   			}),
   		},
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         use: ['babel-loader'],
       },
       {
-        // 同时匹配 ts，tsx 后缀的 TypeScript 源码文件 
+        // 同时匹配 ts，tsx 后缀的 TypeScript 源码文件
         test: /\.tsx?$/,
         use: [
           {
@@ -45,8 +46,8 @@ module.exports = {
   	]
   },
   resolve: {
-    // 先尝试 ts，tsx 后缀的 TypeScript 源码文件 
-    extensions: ['.ts', '.tsx', '.js'] 
+    // 先尝试 ts，tsx 后缀的 TypeScript 源码文件
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
   // 输出source-map 方便直接调试ES6源码
   devtool: 'source-map',
@@ -64,6 +65,10 @@ module.exports = {
         removeComments: true,                   // 移除HTML中的注释
         collapseWhitespace: true,               // 删除空白符与换行符
       },
+    }),
+    new WebpackAssetsManifest({ // 生成 asset-manifest.json
+      // Options go here
+      output: 'asset-manifest.json' // 自定义名称
     })
   ]
 };
