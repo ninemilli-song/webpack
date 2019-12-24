@@ -11,16 +11,16 @@
 
 了解 Webpack 整体架构、工作流程，学会区分一个功能的实现是通过 Loader 合适还是 Plugin 更合适： 
 
-- [5-1 工作原理概括](5-1工作原理概括.html)
-- [5-2 输出文件分析](5-2输出文件分析.html)
+- [5-1 工作原理概括](5-1工作原理概括.md)
+- [5-2 输出文件分析](5-2输出文件分析.md)
 
 如何开发、调试 Loader 和 Plugin：
 
-- [5-3 编写 Loader](5-3编写Loader.html)
-- [5-4 编写 Plugin](5-4编写Plugin.html)
-- [5-5 调试 Webpack](5-5调试Webpack.html)
+- [5-3 编写 Loader](5-3编写Loader.md)
+- [5-4 编写 Plugin](5-4编写Plugin.md)
+- [5-5 调试 Webpack](5-5调试Webpack.md)
 
-[5-6 原理总结](5-6原理总结.html) 对本章做一个总结。
+[5-6 原理总结](5-6原理总结.md) 对本章做一个总结。
 
 #  results matching ""
 
