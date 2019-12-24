@@ -6,4 +6,5 @@ CNAME
 **/*.css
 **/*.html
 **/*.json
+**/.babelrc
 /gitbook

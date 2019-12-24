@@ -1,19 +1,13 @@
 # [在线阅读](http://webpack.wuhaolin.cn)《深入浅出 Webpack》
 
-<p align='center'>
-  <a href='http://webpack.wuhaolin.cn/'>
-    <img src='http://p0.meituan.net/scarlett/df16c51ffb95186df6f75d8c0e22b965842464.png' width='306px' height='411px'/>
-  </a>
-</p>
-
 ## 内容简介
 本书是国内第一本系统全面讲解 Webpack 的图书，涵盖了 Webpack 的入门、配置、实战、优化、原理。
 
-- [第1章](http://webpack.wuhaolin.cn/1%E5%85%A5%E9%97%A8/)教你从0开始学会使用 Webpack；
-- [第2章](http://webpack.wuhaolin.cn/2%E9%85%8D%E7%BD%AE/)详细的讲解了 Webpack 提供的常用配置项；
-- [第3章](http://webpack.wuhaolin.cn/3%E5%AE%9E%E6%88%98/)结合实际项目中常见的场景给出最佳实践；
-- [第4章](http://webpack.wuhaolin.cn/4%E4%BC%98%E5%8C%96/)罗列出了各种优化 Webpack 的手段；
-- [第5章](http://webpack.wuhaolin.cn/5%E5%8E%9F%E7%90%86/)剖析了 Webpack 原理以及如何开发 Plugin 和 Loader。
+- [第1章](https://github.com/ninemilli-song/webpack/blob/master/1%E5%85%A5%E9%97%A8/index.md)教你从0开始学会使用 Webpack；
+- [第2章](https://github.com/ninemilli-song/webpack/blob/master/2%E9%85%8D%E7%BD%AE/index.md)详细的讲解了 Webpack 提供的常用配置项；
+- [第3章](https://github.com/ninemilli-song/webpack/blob/master/3%E5%AE%9E%E6%88%98/index.md)结合实际项目中常见的场景给出最佳实践；
+- [第4章](https://github.com/ninemilli-song/webpack/blob/master/4%E4%BC%98%E5%8C%96/index.md)罗列出了各种优化 Webpack 的手段；
+- [第5章](https://github.com/ninemilli-song/webpack/blob/master/5%E5%8E%9F%E7%90%86/index.md)剖析了 Webpack 原理以及如何开发 Plugin 和 Loader。
 
 除了深入讲解 Webpack，本书还附带介绍了 ES6、TypeScript、PostCSS、Prepack、离线缓存、单页应用、CDN 等 Web 开发相关的技能。
 
